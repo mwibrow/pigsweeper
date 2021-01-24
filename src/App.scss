@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background-color: #101010;
+}
+
+.App {
+  text-align: center;
+  color: white;
+  background-color: #101010;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.game {
+  padding: 1rem;
+}
+.game-status {
+  position: relative;
+  color: white;
+  padding: 0rem 0.25rem 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  height: 2.5rem;
+}
+
+.game-status-flags {
+  margin-left: auto;
+}
+
+.game-status-timer {
+  margin-right: auto;
+}
+
+.game-status .status {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.game-status .status::before {
+  content: '🙂';
+}
+
+.game-status .status-lost::before {
+  content: '😭';
+}
+
+.game-status .status-guessing::before {
+  content: '😨';
+}

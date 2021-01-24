@@ -1,0 +1,98 @@
+.tile {
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.333rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    position: absolute;
+    content: '🟫';
+  }
+
+  &.tile-active:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+
+.tile-visible {
+  &.tile-active:hover {
+    opacity: 1;
+    cursor: default;
+  }
+}
+
+.tile-flagged {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &::after {
+    position: absolute;
+    font-size: 125%;
+    top: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    content: '🚩';
+  }
+}
+
+.tile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.tile-image-kind-mine {
+  &::before {
+    content: '🐷';
+  }
+}
+
+.tile-image-kind-empty {
+  &::before {
+    content: '🟩';
+  }
+}
+
+.tile-flagged {
+  position: absolute;
+  font-size: 75%;
+  &::after {
+    content: '🚩';
+  }
+}
+
+.tile-neighbors {
+  position: absolute;
+  font-size: 50%;
+  font-weight: bold;
+  display: none;
+}
+
+@for $i from 1 through 9 {
+  .tile-neighbors-#{$i} {
+    &::after {
+      content: '#{$i}';
+    }
+  }
+}
+
+.tile-visible {
+  .tile-image {
+    display: flex;
+  }
+  .tile-neighbors {
+    display: flex;
+  }
+}

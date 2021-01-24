@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'BubblegumSans';
+  src: local('BubblegumSans'),
+    url(./assets/fonts/BubblegumSans.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: 'BubblegumSans';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
