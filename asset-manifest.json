@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.280505f6.chunk.css",
-    "main.js": "/static/js/main.61b73a7a.chunk.js",
-    "main.js.map": "/static/js/main.61b73a7a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f892926d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f892926d.js.map",
-    "static/js/2.533241a1.chunk.js": "/static/js/2.533241a1.chunk.js",
-    "static/js/2.533241a1.chunk.js.map": "/static/js/2.533241a1.chunk.js.map",
-    "static/js/3.0c8a67e9.chunk.js": "/static/js/3.0c8a67e9.chunk.js",
-    "static/js/3.0c8a67e9.chunk.js.map": "/static/js/3.0c8a67e9.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.280505f6.chunk.css.map": "/static/css/main.280505f6.chunk.css.map",
-    "static/js/2.533241a1.chunk.js.LICENSE.txt": "/static/js/2.533241a1.chunk.js.LICENSE.txt",
-    "static/media/index.scss": "/static/media/BubblegumSans.5acfa15d.ttf"
+    "main.css": "/mwibrow/pigsweeper/static/css/main.e855605c.chunk.css",
+    "main.js": "/mwibrow/pigsweeper/static/js/main.61b73a7a.chunk.js",
+    "main.js.map": "/mwibrow/pigsweeper/static/js/main.61b73a7a.chunk.js.map",
+    "runtime-main.js": "/mwibrow/pigsweeper/static/js/runtime-main.99b33c6d.js",
+    "runtime-main.js.map": "/mwibrow/pigsweeper/static/js/runtime-main.99b33c6d.js.map",
+    "static/js/2.533241a1.chunk.js": "/mwibrow/pigsweeper/static/js/2.533241a1.chunk.js",
+    "static/js/2.533241a1.chunk.js.map": "/mwibrow/pigsweeper/static/js/2.533241a1.chunk.js.map",
+    "static/js/3.0c8a67e9.chunk.js": "/mwibrow/pigsweeper/static/js/3.0c8a67e9.chunk.js",
+    "static/js/3.0c8a67e9.chunk.js.map": "/mwibrow/pigsweeper/static/js/3.0c8a67e9.chunk.js.map",
+    "index.html": "/mwibrow/pigsweeper/index.html",
+    "static/css/main.e855605c.chunk.css.map": "/mwibrow/pigsweeper/static/css/main.e855605c.chunk.css.map",
+    "static/js/2.533241a1.chunk.js.LICENSE.txt": "/mwibrow/pigsweeper/static/js/2.533241a1.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/mwibrow/pigsweeper/static/media/BubblegumSans.5acfa15d.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.f892926d.js",
+    "static/js/runtime-main.99b33c6d.js",
     "static/js/2.533241a1.chunk.js",
-    "static/css/main.280505f6.chunk.css",
+    "static/css/main.e855605c.chunk.css",
     "static/js/main.61b73a7a.chunk.js"
   ]
 }
