@@ -16,7 +16,7 @@ enum GameState {
 }
 
 function App() {
-  const [grid] = useState<Grid>(new Grid(12, 12, 40));
+  const [grid] = useState<Grid>(new Grid(12, 12, 24));
   const [moves, setMoves] = useState<number>(0);
 
   const [gameState, setGameState] = useState<GameState>(GameState.Default);
