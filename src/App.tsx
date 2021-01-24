@@ -4,7 +4,7 @@ import React, { useState, MouseEvent } from 'react';
 import { Grid } from './lib/Grid';
 import GridComponent from './components/Grid';
 import Tile from './components/Tile';
-import Timer from './components/Timer';
+import Timer, { TimerState } from './components/Timer';
 
 import './App.scss';
 
@@ -16,17 +16,25 @@ enum GameState {
 }
 
 function App() {
-  const [grid] = useState<Grid>(new Grid(12, 12, 24));
+  const [rows] = useState<number>(12);
+  const [columns] = useState<number>(12);
+  const [mines] = useState<number>(24);
+
+  const [grid, setGrid] = useState<Grid>(new Grid(rows, columns, mines));
   const [moves, setMoves] = useState<number>(0);
 
   const [gameState, setGameState] = useState<GameState>(GameState.Default);
   const [guessing, setGuessing] = useState<Boolean>(false);
+  const [timerState, setTimerState] = useState<TimerState>(TimerState.Stopped);
 
   const playing = gameState === GameState.Playing;
   const active = playing || gameState === GameState.Default;
 
   const handleRestart = () => {
-    window.location.reload();
+    setGrid(new Grid(rows, columns, mines));
+    setMoves(0);
+    setGameState(GameState.Default);
+    setTimerState(TimerState.Reset);
   };
 
   const handleMouseDown = () => {
@@ -41,15 +49,18 @@ function App() {
     grid.toggleFlag(i, j);
     setMoves(moves + 1);
     setGameState(GameState.Playing);
+    setTimerState(TimerState.Running);
   };
 
   const handleSelect = (i: number, j: number) => {
     if (grid.isMine(i, j)) {
       grid.showMines();
       setGameState(GameState.Lost);
+      setTimerState(TimerState.Stopped);
     } else {
       grid.makeVisible(i, j);
       setGameState(GameState.Playing);
+      setTimerState(TimerState.Running);
     }
     setMoves(moves + 1);
   };
@@ -75,7 +86,7 @@ function App() {
       <div className="game">
         <div className="game-status">
           <div className="game-status-timer">
-            <Timer running={playing} />
+            <Timer state={timerState} />
           </div>
           <div
             className={clsx('status', {
