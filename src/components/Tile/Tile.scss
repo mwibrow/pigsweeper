@@ -13,14 +13,15 @@
   }
 
   &.tile-active:hover {
-    opacity: 0.5;
-    cursor: pointer;
+    &::before {
+      content: '🟦';
+      cursor: pointer;
+    }
   }
 }
 
 .tile-visible {
   &.tile-active:hover {
-    opacity: 1;
     cursor: default;
   }
 }
