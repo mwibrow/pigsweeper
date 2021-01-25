@@ -64,6 +64,9 @@ function App() {
   };
 
   const handleSelect = (i: number, j: number) => {
+    if (moves === 0) {
+      grid.create(i, j);
+    }
     if (grid.isMine(i, j)) {
       grid.showMines();
       setGameState(GameState.Lost);

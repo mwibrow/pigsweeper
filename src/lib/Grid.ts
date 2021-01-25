@@ -32,10 +32,21 @@ export class Grid {
     this.mines = Math.max(Math.min(mines, this.rows * this.columns - 1), 1);
     this.flags = this.covered = this.mines;
     this.cells = [];
-    this.create();
+    this.initialise();
   }
 
-  create() {
+  initialise() {
+    for (let i: number = 0; i < this.rows; i++) {
+      this.cells.push([]);
+      for (let j: number = 0; j < this.columns; j++) {
+        this.cells[i].push(new GridCell());
+      }
+    }
+  }
+
+  create(i?: number, j?: number) {
+    const ignoreI = i;
+    const ignoreJ = j;
     for (let i: number = 0; i < this.rows; i++) {
       this.cells.push([]);
       for (let j: number = 0; j < this.columns; j++) {
@@ -45,7 +56,7 @@ export class Grid {
     for (let k: number = this.mines; k > 0; k--) {
       const i: number = Math.floor(Math.random() * this.rows);
       const j: number = Math.floor(Math.random() * this.columns);
-      if (this.isMine(i, j)) {
+      if (this.isMine(i, j) || i === ignoreI || j === ignoreJ) {
         k++;
       } else {
         this.cells[i][j].setKind(GridCellKind.Mine);
@@ -131,8 +142,8 @@ export class Grid {
     if (
       this.isInGrid(i, j) &&
       !this.cells[i][j].visible &&
-      !this.cells[i][j].isMine() //&&
-      //!this.cells[i][j].flagged
+      !this.cells[i][j].isMine() &&
+      !this.cells[i][j].flagged
     ) {
       this.cells[i][j].visible = true;
       this.covered--;
