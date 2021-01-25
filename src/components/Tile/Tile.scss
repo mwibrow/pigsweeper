@@ -18,6 +18,8 @@
       cursor: pointer;
     }
   }
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
 }
 
 .tile-visible {
