@@ -1,3 +1,5 @@
+@import '../../theme/global';
+
 .tile {
   position: relative;
   width: 1.5rem;
@@ -18,8 +20,7 @@
       cursor: pointer;
     }
   }
-  -webkit-user-select: none !important;
-  -webkit-touch-callout: none !important;
+  @include disable-text-selection;
 }
 
 .tile-visible {

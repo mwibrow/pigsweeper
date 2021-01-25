@@ -1,3 +1,5 @@
+@import './theme/global';
+
 * {
   box-sizing: border-box;
 }
@@ -26,8 +28,7 @@ html {
   font-size: 150%;
   font-weight: bold;
   cursor: default;
-  -webkit-user-select: none !important;
-  -webkit-touch-callout: none !important;
+  @include disable-text-selection;
 }
 
 .game {
@@ -44,20 +45,17 @@ html {
   align-items: center;
   text-align: center;
   height: 2.5rem;
-  -webkit-user-select: none !important;
-  -webkit-touch-callout: none !important;
+  @include disable-text-selection;
 }
 
 .dashboard-flags {
   margin-left: auto;
-  -webkit-user-select: none !important;
-  -webkit-touch-callout: none !important;
+  @include disable-text-selection;
 }
 
 .dashboard-timer {
   margin-right: auto;
-  -webkit-user-select: none !important;
-  -webkit-touch-callout: none !important;
+  @include disable-text-selection;
 }
 
 .dashboard-status {
@@ -69,8 +67,7 @@ html {
   height: 2rem;
   font-size: 1.75rem;
   cursor: pointer;
-  -webkit-user-select: none !important;
-  -webkit-touch-callout: none !important;
+  @include disable-text-selection;
 }
 
 .dashboard-status::before {

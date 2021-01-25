@@ -1,4 +1,5 @@
+@import '../../theme/global';
+
 .tile-events {
-  -webkit-user-select: none !important;
-  -webkit-touch-callout: none !important;
+  @include disable-text-selection;
 }
