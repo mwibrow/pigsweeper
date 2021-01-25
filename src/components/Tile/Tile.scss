@@ -78,6 +78,9 @@
   font-size: 50%;
   font-weight: bold;
   display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -66%);
 }
 
 @for $i from 1 through 9 {

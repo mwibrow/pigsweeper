@@ -24,12 +24,13 @@ export class Grid {
   columns: number;
   mines: number;
   flags: number;
+  covered: number;
 
   constructor(rows: number, columns: number, mines: number) {
     this.rows = Math.max(rows, 2);
     this.columns = Math.max(columns, 2);
     this.mines = Math.max(Math.min(mines, this.rows * this.columns - 1), 1);
-    this.flags = this.mines;
+    this.flags = this.covered = this.mines;
     this.cells = [];
     this.create();
   }
@@ -66,6 +67,7 @@ export class Grid {
         }
       }
     }
+    this.flags = this.covered = this.mines;
   }
 
   cellAt(i: number, j: number): GridCell {
@@ -104,6 +106,10 @@ export class Grid {
     }
   }
 
+  hasWon(): boolean {
+    return this.covered === this.mines;
+  }
+
   toggleFlag(i: number, j: number) {
     this.cells[i][j].flagged = !this.cells[i][j].flagged;
     if (this.cells[i][j].flagged) {
@@ -121,10 +127,14 @@ export class Grid {
     if (
       this.isInGrid(i, j) &&
       !this.cells[i][j].visible &&
-      !this.cells[i][j].isMine() &&
-      !this.cells[i][j].flagged
+      !this.cells[i][j].isMine() //&&
+      //!this.cells[i][j].flagged
     ) {
       this.cells[i][j].visible = true;
+      this.covered--;
+      if (this.cells[i][j].flagged) {
+        this.toggleFlag(i, j);
+      }
       if (!this.hasNeighbours(i, j)) {
         this.makeVisible(i - 1, j);
         this.makeVisible(i + 1, j);

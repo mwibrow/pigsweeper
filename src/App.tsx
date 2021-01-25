@@ -15,6 +15,11 @@ enum GameState {
   Lost,
 }
 
+const cancelEvent = (event: MouseEvent) => {
+  event.preventDefault();
+  event.stopPropagation();
+};
+
 function App() {
   const [rows] = useState<number>(12);
   const [columns] = useState<number>(12);
@@ -37,11 +42,15 @@ function App() {
     setTimerState(TimerState.Reset);
   };
 
-  const handleMouseDown = () => {
+  const handleMouseDown = (event: MouseEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
     if (playing) setGuessing(true);
   };
 
-  const handleMouseUp = () => {
+  const handleMouseUp = (event: MouseEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
     if (playing) setGuessing(false);
   };
 
@@ -59,8 +68,13 @@ function App() {
       setTimerState(TimerState.Stopped);
     } else {
       grid.makeVisible(i, j);
-      setGameState(GameState.Playing);
-      setTimerState(TimerState.Running);
+      if (grid.hasWon()) {
+        setGameState(GameState.Won);
+        setTimerState(TimerState.Stopped);
+      } else {
+        setGameState(GameState.Playing);
+        setTimerState(TimerState.Running);
+      }
     }
     setMoves(moves + 1);
   };
@@ -70,7 +84,7 @@ function App() {
     i: number,
     j: number
   ): ((event: MouseEvent) => void) | undefined => {
-    if (!active || grid.cells[i][j].visible) {
+    if (!active) {
       return undefined;
     }
     return (event: MouseEvent) => {
@@ -81,21 +95,21 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App" onContextMenu={cancelEvent} onClick={cancelEvent}>
       <div className="heading">Pigsweeper</div>
       <div className="game">
-        <div className="game-status">
-          <div className="game-status-timer">
+        <div className="dashboard">
+          <div className="dashboard-timer">
             <Timer state={timerState} />
           </div>
           <div
-            className={clsx('status', {
+            className={clsx('dashboard-status', {
               'status-lost': gameState === GameState.Lost,
               'status-guessing': guessing,
             })}
             onClick={handleRestart}
           />
-          <div className="game-status-flags">Flags: {grid.flags}</div>
+          <div className="dashboard-flags">Flags: {grid.flags}</div>
         </div>
         <GridComponent
           rows={grid.rows}

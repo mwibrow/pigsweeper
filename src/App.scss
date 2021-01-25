@@ -25,12 +25,14 @@ html {
 .heading {
   font-size: 150%;
   font-weight: bold;
+  cursor: default;
 }
 
 .game {
   padding: 1rem;
 }
-.game-status {
+
+.dashboard {
   position: relative;
   color: white;
   padding: 0rem 0.25rem 0.5rem;
@@ -42,15 +44,15 @@ html {
   height: 2.5rem;
 }
 
-.game-status-flags {
+.dashboard-flags {
   margin-left: auto;
 }
 
-.game-status-timer {
+.dashboard-timer {
   margin-right: auto;
 }
 
-.game-status .status {
+.dashboard-status {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -61,14 +63,14 @@ html {
   cursor: pointer;
 }
 
-.game-status .status::before {
+.dashboard-status::before {
   content: '🙂';
 }
 
-.game-status .status-lost::before {
+.dashboard-status.status-lost::before {
   content: '😭';
 }
 
-.game-status .status-guessing::before {
+.dashboard-status.status-guessing::before {
   content: '😨';
 }
