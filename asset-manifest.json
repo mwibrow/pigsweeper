@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/pigsweeper/static/css/main.ce0f5474.chunk.css",
-    "main.js": "/pigsweeper/static/js/main.31b67e99.chunk.js",
-    "main.js.map": "/pigsweeper/static/js/main.31b67e99.chunk.js.map",
+    "main.css": "/pigsweeper/static/css/main.81f9dcb0.chunk.css",
+    "main.js": "/pigsweeper/static/js/main.2c8284c0.chunk.js",
+    "main.js.map": "/pigsweeper/static/js/main.2c8284c0.chunk.js.map",
     "runtime-main.js": "/pigsweeper/static/js/runtime-main.c84e08be.js",
     "runtime-main.js.map": "/pigsweeper/static/js/runtime-main.c84e08be.js.map",
     "static/js/2.533241a1.chunk.js": "/pigsweeper/static/js/2.533241a1.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.0c8a67e9.chunk.js": "/pigsweeper/static/js/3.0c8a67e9.chunk.js",
     "static/js/3.0c8a67e9.chunk.js.map": "/pigsweeper/static/js/3.0c8a67e9.chunk.js.map",
     "index.html": "/pigsweeper/index.html",
-    "static/css/main.ce0f5474.chunk.css.map": "/pigsweeper/static/css/main.ce0f5474.chunk.css.map",
+    "static/css/main.81f9dcb0.chunk.css.map": "/pigsweeper/static/css/main.81f9dcb0.chunk.css.map",
     "static/js/2.533241a1.chunk.js.LICENSE.txt": "/pigsweeper/static/js/2.533241a1.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/pigsweeper/static/media/BubblegumSans.5acfa15d.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.c84e08be.js",
     "static/js/2.533241a1.chunk.js",
-    "static/css/main.ce0f5474.chunk.css",
-    "static/js/main.31b67e99.chunk.js"
+    "static/css/main.81f9dcb0.chunk.css",
+    "static/js/main.2c8284c0.chunk.js"
   ]
 }
