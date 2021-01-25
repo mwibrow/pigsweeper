@@ -26,6 +26,8 @@ html {
   font-size: 150%;
   font-weight: bold;
   cursor: default;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
 }
 
 .game {
@@ -42,14 +44,20 @@ html {
   align-items: center;
   text-align: center;
   height: 2.5rem;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
 }
 
 .dashboard-flags {
   margin-left: auto;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
 }
 
 .dashboard-timer {
   margin-right: auto;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
 }
 
 .dashboard-status {
@@ -61,6 +69,8 @@ html {
   height: 2rem;
   font-size: 1.75rem;
   cursor: pointer;
+  -webkit-user-select: none !important;
+  -webkit-touch-callout: none !important;
 }
 
 .dashboard-status::before {
