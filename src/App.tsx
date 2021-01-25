@@ -55,10 +55,12 @@ function App() {
   };
 
   const handleAddFlag = (i: number, j: number) => {
-    grid.toggleFlag(i, j);
-    setMoves(moves + 1);
-    setGameState(GameState.Playing);
-    setTimerState(TimerState.Running);
+    if (!grid.isVisible(i, j)) {
+      grid.toggleFlag(i, j);
+      setMoves(moves + 1);
+      setGameState(GameState.Playing);
+      setTimerState(TimerState.Running);
+    }
   };
 
   const handleSelect = (i: number, j: number) => {

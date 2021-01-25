@@ -82,6 +82,10 @@ export class Grid {
     return this.isInGrid(i, j) && this.cells[i][j].isMine();
   }
 
+  isVisible(i: number, j: number): boolean {
+    return this.isInGrid(i, j) && this.cells[i][j].visible;
+  }
+
   reset() {
     for (let i: number = 0; i < this.rows; i++) {
       for (let j: number = 0; j < this.columns; j++) {
