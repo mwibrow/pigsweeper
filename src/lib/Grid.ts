@@ -142,8 +142,15 @@ export class Grid {
       if (!this.hasNeighbours(i, j)) {
         this.makeVisible(i - 1, j);
         this.makeVisible(i + 1, j);
+
         this.makeVisible(i, j - 1);
         this.makeVisible(i, j + 1);
+
+        this.makeVisible(i - 1, j - 1);
+        this.makeVisible(i - 1, j + 1);
+
+        this.makeVisible(i + 1, j - 1);
+        this.makeVisible(i + 1, j + 1);
       }
     }
   }
