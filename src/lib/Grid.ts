@@ -30,7 +30,8 @@ export class Grid {
     this.rows = Math.max(rows, 2);
     this.columns = Math.max(columns, 2);
     this.mines = Math.max(Math.min(mines, this.rows * this.columns - 1), 1);
-    this.flags = this.covered = this.mines;
+    this.flags = this.mines;
+    this.covered = this.rows * this.flags;
     this.cells = [];
     this.initialise();
   }
@@ -78,7 +79,8 @@ export class Grid {
         }
       }
     }
-    this.flags = this.covered = this.mines;
+    this.flags = this.mines;
+    this.covered = this.rows * this.columns;
   }
 
   cellAt(i: number, j: number): GridCell {
@@ -147,9 +149,6 @@ export class Grid {
     ) {
       this.cells[i][j].visible = true;
       this.covered--;
-      if (this.cells[i][j].flagged) {
-        this.toggleFlag(i, j);
-      }
       if (!this.hasNeighbours(i, j)) {
         this.makeVisible(i - 1, j);
         this.makeVisible(i + 1, j);

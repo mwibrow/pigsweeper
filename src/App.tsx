@@ -5,6 +5,7 @@ import { Grid } from './lib/Grid';
 import GridComponent from './components/Grid';
 import Tile from './components/Tile';
 import Timer, { TimerState } from './components/Timer';
+import TileEvents from './components/TileEvents';
 
 import './App.scss';
 
@@ -38,32 +39,17 @@ function App() {
   const handleRestart = () => {
     setGrid(new Grid(rows, columns, mines));
     setMoves(0);
+    setGuessing(false);
     setGameState(GameState.Default);
     setTimerState(TimerState.Reset);
   };
 
-  const handleMouseDown = (event: MouseEvent) => {
-    event.preventDefault();
-    event.stopPropagation();
-    if (playing) setGuessing(true);
+  const handleTouchStart = (i: number, j: number) => {
+    setGuessing(true);
   };
 
-  const handleMouseUp = (event: MouseEvent) => {
-    event.preventDefault();
-    event.stopPropagation();
-    if (playing) setGuessing(false);
-  };
-
-  const handleAddFlag = (i: number, j: number) => {
-    if (!grid.isVisible(i, j)) {
-      grid.toggleFlag(i, j);
-      setMoves(moves + 1);
-      setGameState(GameState.Playing);
-      setTimerState(TimerState.Running);
-    }
-  };
-
-  const handleSelect = (i: number, j: number) => {
+  const handleTouchEnd = (i: number, j: number) => {
+    setGuessing(false);
     if (moves === 0) {
       grid.create(i, j);
     }
@@ -84,19 +70,13 @@ function App() {
     setMoves(moves + 1);
   };
 
-  const makeClickHandler = (
-    handler: (i: number, j: number) => void,
-    i: number,
-    j: number
-  ): ((event: MouseEvent) => void) | undefined => {
-    if (!active) {
-      return undefined;
+  const handleLongTouchEnd = (i: number, j: number) => {
+    setGuessing(false);
+    if (moves === 0) {
+      grid.create(i, j);
     }
-    return (event: MouseEvent) => {
-      event.preventDefault();
-      event.stopPropagation();
-      handler(i, j);
-    };
+    grid.toggleFlag(i, j);
+    setMoves(moves + 1);
   };
 
   return (
@@ -124,11 +104,11 @@ function App() {
             const cell = grid.cellAt(i, j);
 
             return (
-              <div
-                onMouseDown={handleMouseDown}
-                onMouseUp={handleMouseUp}
-                onClick={makeClickHandler(handleSelect, i, j)}
-                onContextMenu={makeClickHandler(handleAddFlag, i, j)}
+              <TileEvents
+                active={active && !grid.isVisible(i, j)}
+                onTouchStart={() => handleTouchStart(i, j)}
+                onTouchEnd={() => handleTouchEnd(i, j)}
+                onLongTouchEnd={() => handleLongTouchEnd(i, j)}
               >
                 <Tile
                   active={active}
@@ -137,7 +117,7 @@ function App() {
                   neighbors={cell.neighbors}
                   flagged={cell.flagged}
                 />
-              </div>
+              </TileEvents>
             );
           }}
         />
