@@ -106,6 +106,7 @@ function App() {
             className={clsx('dashboard-status', {
               'status-lost': gameState === GameState.Lost,
               'status-guessing': guessing,
+              'status-won': gameState === GameState.Won,
             })}
             onClick={handleRestart}
           />

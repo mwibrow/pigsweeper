@@ -67,6 +67,10 @@ html {
   content: '🙂';
 }
 
+.dashboard-status.status-won::before {
+  content: '🥳';
+}
+
 .dashboard-status.status-lost::before {
   content: '😭';
 }
