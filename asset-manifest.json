@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/pigsweeper/static/css/main.81f9dcb0.chunk.css",
-    "main.js": "/pigsweeper/static/js/main.2c8284c0.chunk.js",
-    "main.js.map": "/pigsweeper/static/js/main.2c8284c0.chunk.js.map",
+    "main.js": "/pigsweeper/static/js/main.414e9d30.chunk.js",
+    "main.js.map": "/pigsweeper/static/js/main.414e9d30.chunk.js.map",
     "runtime-main.js": "/pigsweeper/static/js/runtime-main.c84e08be.js",
     "runtime-main.js.map": "/pigsweeper/static/js/runtime-main.c84e08be.js.map",
     "static/js/2.533241a1.chunk.js": "/pigsweeper/static/js/2.533241a1.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.c84e08be.js",
     "static/js/2.533241a1.chunk.js",
     "static/css/main.81f9dcb0.chunk.css",
-    "static/js/main.2c8284c0.chunk.js"
+    "static/js/main.414e9d30.chunk.js"
   ]
 }
