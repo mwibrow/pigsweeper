@@ -7,11 +7,14 @@ import { ReactComponent as Earth } from './svg/earth.svg';
 import { ReactComponent as Flag } from './svg/flag.svg';
 import { ReactComponent as Grass } from './svg/grass.svg';
 import { ReactComponent as Pig } from './svg/pig.svg';
+import { ReactComponent as Happy } from './svg/smiling.svg';
+import { ReactComponent as Scared } from './svg/pensive.svg';
+import { ReactComponent as Sad } from './svg/crying.svg';
 
 export enum SpriteName {
-  // Happy = '🙂',
-  // Sad = '😭',
-  // Scared = '😨',
+  Happy,
+  Sad,
+  Scared,
   Covered,
   Flag,
   Mine,
@@ -28,6 +31,12 @@ const getComponent = (name: SpriteName) => {
       return Grass;
     case SpriteName.Mine:
       return Pig;
+    case SpriteName.Happy:
+      return Happy;
+    case SpriteName.Sad:
+      return Sad;
+    case SpriteName.Scared:
+      return Scared;
   }
 };
 interface SpriteProps {

@@ -6,7 +6,7 @@ import GridComponent from './components/Grid';
 import Tile from './components/Tile';
 import Timer, { TimerState } from './components/Timer';
 import TileEvents from './components/TileEvents';
-
+import Sprite, { SpriteName } from './components/Sprite';
 import './App.scss';
 
 enum GameState {
@@ -94,7 +94,19 @@ function App() {
               'status-won': gameState === GameState.Won,
             })}
             onClick={handleRestart}
-          />
+          >
+            <Sprite
+              name={
+                gameState === GameState.Lost
+                  ? SpriteName.Sad
+                  : gameState === GameState.Won
+                  ? SpriteName.Happy
+                  : guessing
+                  ? SpriteName.Scared
+                  : SpriteName.Happy
+              }
+            />
+          </div>
           <div className="dashboard-flags">Flags: {grid.flags}</div>
         </div>
         <GridComponent

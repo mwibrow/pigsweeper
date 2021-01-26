@@ -9,19 +9,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-=======
-  &::before {
-    position: absolute;
-    content: '🟫';
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: '🟫';
+  // }
 
-  &.tile-active:hover {
-    &::before {
-      content: '🟦';
-      cursor: pointer;
-    }
-  }
+  // &.tile-active:hover {
+  //   &::before {
+  //     content: '🟦';
+  //     cursor: pointer;
+  //   }
+  // }
   @include disable-text-selection;
 }
 
@@ -36,14 +34,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  &::after {
-    position: absolute;
-    font-size: 125%;
-    top: 50%;
-    height: 50%;
-    transform: translate(-50%, -50%);
-    content: '🚩';
-  }
+  // &::after {
+  //   position: absolute;
+  //   font-size: 125%;
+  //   top: 50%;
+  //   height: 50%;
+  //   transform: translate(-50%, -50%);
+  //   content: '🚩';
+  // }
 }
 
 .tile-image {
@@ -60,24 +58,23 @@
 }
 
 .tile-image-kind-mine {
-  &::before {
-    content: '🐷';
-  }
+  // &::before {
+  //   content: '🐷';
+  // }
 }
 
 .tile-image-kind-empty {
-  &::before {
-    content: '🟩';
-  }
+  // &::before {
+  //   content: '🟩';
+  // }
 }
 
 .tile-flagged {
   position: absolute;
   font-size: 75%;
-  &::after {
-    content: '🚩';
-  }
->>>>>>> main
+  // &::after {
+  //   content: '🚩';
+  // }
 }
 
 .tile-neighbors {
