@@ -1,0 +1,5 @@
+@import '../../theme/global';
+
+.tile-events {
+  @include disable-text-selection;
+}

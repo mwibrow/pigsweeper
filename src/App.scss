@@ -1,3 +1,5 @@
+@import './theme/global';
+
 * {
   box-sizing: border-box;
 }
@@ -26,6 +28,7 @@ html {
   font-size: 150%;
   font-weight: bold;
   cursor: default;
+  @include disable-text-selection;
 }
 
 .game {
@@ -42,14 +45,17 @@ html {
   align-items: center;
   text-align: center;
   height: 2.5rem;
+  @include disable-text-selection;
 }
 
 .dashboard-flags {
   margin-left: auto;
+  @include disable-text-selection;
 }
 
 .dashboard-timer {
   margin-right: auto;
+  @include disable-text-selection;
 }
 
 .dashboard-status {
@@ -61,6 +67,7 @@ html {
   height: 2rem;
   font-size: 1.75rem;
   cursor: pointer;
+  @include disable-text-selection;
 }
 
 .dashboard-status::before {

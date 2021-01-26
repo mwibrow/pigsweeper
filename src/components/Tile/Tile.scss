@@ -1,3 +1,5 @@
+@import '../../theme/global';
+
 .tile {
   position: relative;
   width: 1.5rem;
@@ -7,6 +9,75 @@
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
+=======
+  &::before {
+    position: absolute;
+    content: '🟫';
+  }
+
+  &.tile-active:hover {
+    &::before {
+      content: '🟦';
+      cursor: pointer;
+    }
+  }
+  @include disable-text-selection;
+}
+
+.tile-visible {
+  &.tile-active:hover {
+    cursor: default;
+  }
+}
+
+.tile-flagged {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &::after {
+    position: absolute;
+    font-size: 125%;
+    top: 50%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    content: '🚩';
+  }
+}
+
+.tile-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 1;
+
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.tile-image-kind-mine {
+  &::before {
+    content: '🐷';
+  }
+}
+
+.tile-image-kind-empty {
+  &::before {
+    content: '🟩';
+  }
+}
+
+.tile-flagged {
+  position: absolute;
+  font-size: 75%;
+  &::after {
+    content: '🚩';
+  }
+>>>>>>> main
 }
 
 .tile-neighbors {
