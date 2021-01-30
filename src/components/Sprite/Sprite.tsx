@@ -7,18 +7,19 @@ import { ReactComponent as Earth } from './svg/earth.svg';
 import { ReactComponent as Flag } from './svg/flag.svg';
 import { ReactComponent as Grass } from './svg/grass.svg';
 import { ReactComponent as Pig } from './svg/pig.svg';
-import { ReactComponent as Happy } from './svg/smiling.svg';
+import { ReactComponent as Happy } from './svg/smile.svg';
 import { ReactComponent as Scared } from './svg/pensive.svg';
 import { ReactComponent as Sad } from './svg/crying.svg';
-
+import { ReactComponent as Party } from './svg/celebrate.svg';
 export enum SpriteName {
-  Happy,
-  Sad,
-  Scared,
-  Covered,
-  Flag,
-  Mine,
-  Empty,
+  Happy = 'happy',
+  Sad = 'sad',
+  Scared = 'scared',
+  Covered = 'covered',
+  Flag = 'flag',
+  Mine = 'mine',
+  Empty = 'empty',
+  Party = 'party',
 }
 
 const getComponent = (name: SpriteName) => {
@@ -37,10 +38,12 @@ const getComponent = (name: SpriteName) => {
       return Sad;
     case SpriteName.Scared:
       return Scared;
+    case SpriteName.Party:
+      return Party;
   }
 };
 interface SpriteProps {
-  name: SpriteName | SpriteName[];
+  name?: SpriteName | SpriteName[];
 }
 
 const Sprite: React.FC<SpriteProps> = ({ name }) => {
@@ -48,14 +51,14 @@ const Sprite: React.FC<SpriteProps> = ({ name }) => {
   return (
     <div className="sprite">
       {names.map((name, index) => {
-        const Component = getComponent(name);
+        const Component = getComponent(name as any);
         return (
-          <span
+          <div
             key={`sprite-${index}`}
-            className={clsx('sprite', `sprite-name-${name}`)}
+            className={clsx('sprite-image', `sprite-image-${name}`)}
           >
             <Component className="sprite-svg" />
-          </span>
+          </div>
         );
       })}
     </div>

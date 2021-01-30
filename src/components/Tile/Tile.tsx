@@ -1,4 +1,3 @@
-import clsx from 'clsx';
 import React from 'react';
 
 import Sprite, { SpriteName } from '../Sprite';
@@ -19,9 +18,8 @@ const Tile: React.FC<TileProps> = ({
   mine,
   flagged,
   neighbors,
-  ...others
 }) => {
-  const spriteNames = [];
+  const spriteNames: SpriteName[] = [];
   if (visible) {
     if (mine) {
       spriteNames.push(SpriteName.Covered);
@@ -36,25 +34,19 @@ const Tile: React.FC<TileProps> = ({
     spriteNames.push(SpriteName.Flag);
   }
   return (
-    <div
-      className={clsx('tile', {
-        'tile-active': active,
-        'tile-visible': visible,
-      })}
-      {...others}
-    >
+    <div className="tile">
       {/* <div
         className={clsx(
           'tile-image',
           `tile-image-kind-${mine ? 'mine' : 'empty'}`
         )}
       />
-     
+      <div className={clsx('tile-neighbors', `tile-neighbors-${neighbors}`)} />
       {flagged ? <div className="tile-flagged" /> : null} */}
       <div className="tile-sprite">
         <Sprite name={spriteNames} />
       </div>
-      {visible && neighbors ? (
+      {neighbors && visible ? (
         <span className="tile-neighbors">{neighbors}</span>
       ) : null}
     </div>

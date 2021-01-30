@@ -7,6 +7,7 @@
 body,
 html {
   background-color: #101010;
+  font-size: 16px;
 }
 
 .App {
@@ -25,7 +26,7 @@ html {
 }
 
 .heading {
-  font-size: 150%;
+  font-size: 200%;
   font-weight: bold;
   cursor: default;
   @include disable-text-selection;
@@ -38,36 +39,44 @@ html {
 .dashboard {
   position: relative;
   color: white;
-  padding: 0rem 0.25rem 0.5rem;
+  padding: 1rem 0.25rem 1rem;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
-  height: 2.5rem;
   @include disable-text-selection;
 }
 
 .dashboard-flags {
   margin-left: auto;
   @include disable-text-selection;
+  font-size: 125%;
 }
 
 .dashboard-timer {
   margin-right: auto;
   @include disable-text-selection;
+  font-size: 125%;
 }
 
 .dashboard-status {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -75%);
-  width: 2rem;
-  height: 2rem;
-  font-size: 1.75rem;
+  transform: translate(-50%, -66%);
+  width: 3rem;
+  height: 3rem;
+  font-size: 2.5rem;
   cursor: pointer;
   @include disable-text-selection;
+  &:active,
+  &:focus {
+    outline: 0;
+    border: none;
+    -moz-outline-style: none;
+    outline-style: none;
+  }
 }
 
 .dashboard-status::before {

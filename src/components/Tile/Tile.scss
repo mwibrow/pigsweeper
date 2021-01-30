@@ -2,13 +2,14 @@
 
 .tile {
   position: relative;
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 1.333rem;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.875rem;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   // &::before {
   //   position: absolute;
   //   content: '🟫';
@@ -21,6 +22,8 @@
   //   }
   // }
   @include disable-text-selection;
+=======
+>>>>>>> main
 }
 
 .tile-visible {
@@ -29,11 +32,10 @@
   }
 }
 
-.tile-flagged {
+.tile-sprite {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
+<<<<<<< HEAD
   // &::after {
   //   position: absolute;
   //   font-size: 125%;
@@ -75,10 +77,15 @@
   // &::after {
   //   content: '🚩';
   // }
+=======
+  height: 100%;
+  top: 0;
+  left: 0;
+>>>>>>> main
 }
-
 .tile-neighbors {
   font-size: 50%;
+<<<<<<< HEAD
   z-index: 1;
   cursor: default;
   -webkit-touch-callout: none; /* iOS Safari */
@@ -88,4 +95,10 @@
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+=======
+  font-weight: bold;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -66%);
+>>>>>>> main
 }

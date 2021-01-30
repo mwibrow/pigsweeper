@@ -22,9 +22,9 @@ const cancelEvent = (event: MouseEvent) => {
 };
 
 function App() {
-  const [rows] = useState<number>(12);
-  const [columns] = useState<number>(12);
-  const [mines] = useState<number>(24);
+  const [rows] = useState<number>(10);
+  const [columns] = useState<number>(10);
+  const [mines] = useState<number>(20);
 
   const [grid, setGrid] = useState<Grid>(new Grid(rows, columns, mines));
   const [moves, setMoves] = useState<number>(0);
