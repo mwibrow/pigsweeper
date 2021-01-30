@@ -9,18 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  &::before {
-    position: absolute;
-    content: '🟫';
-  }
-
-  &.tile-active:hover {
-    &::before {
-      content: '🟦';
-      cursor: pointer;
-    }
-  }
-  @include disable-text-selection;
 }
 
 .tile-visible {
@@ -29,77 +17,18 @@
   }
 }
 
-.tile-flagged {
+.tile-sprite {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  &::after {
-    position: absolute;
-    font-size: 125%;
-    top: 50%;
-    height: 50%;
-    transform: translate(-50%, -50%);
-    content: '🚩';
-  }
-}
-
-.tile-image {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  line-height: 1;
-
-  align-items: center;
-  justify-content: center;
-  display: none;
+  top: 0;
+  left: 0;
 }
-
-.tile-image-kind-mine {
-  &::before {
-    content: '🐷';
-  }
-}
-
-.tile-image-kind-empty {
-  &::before {
-    content: '🟩';
-  }
-}
-
-.tile-flagged {
-  position: absolute;
-  font-size: 75%;
-  &::after {
-    content: '🚩';
-  }
-}
-
 .tile-neighbors {
   position: absolute;
   font-size: 50%;
   font-weight: bold;
-  display: none;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -66%);
-}
-
-@for $i from 1 through 9 {
-  .tile-neighbors-#{$i} {
-    &::after {
-      content: '#{$i}';
-    }
-  }
-}
-
-.tile-visible {
-  .tile-image {
-    display: flex;
-  }
-  .tile-neighbors {
-    display: flex;
-  }
 }
