@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-div.sprite {
-=======
 @import '../../theme/global';
 
 .sprite {
   position: relative;
->>>>>>> main
   width: 100%;
   height: 100%;
   display: flex;
   line-height: 1;
-<<<<<<< HEAD
 }
 
 .sprite-svg {
@@ -18,27 +13,20 @@ div.sprite {
   height: 100%;
 }
 
-span.sprite {
-=======
-
-  box-sizing: border-box;
-  @include disable-text-selection;
-}
-
 .sprite-image {
->>>>>>> main
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-<<<<<<< HEAD
+  font-size: 100%;
   width: 100%;
   height: 100%;
-=======
-  font-size: 100%;
+  svg {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .sprite-image-flag {
   font-size: 90% !important;
->>>>>>> main
 }

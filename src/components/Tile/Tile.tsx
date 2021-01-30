@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import React from 'react';
 
 import Sprite, { SpriteName } from '../Sprite';
@@ -34,7 +35,7 @@ const Tile: React.FC<TileProps> = ({
     spriteNames.push(SpriteName.Flag);
   }
   return (
-    <div className="tile">
+    <div className={clsx('tile', { 'tile-visible': visible })}>
       {/* <div
         className={clsx(
           'tile-image',

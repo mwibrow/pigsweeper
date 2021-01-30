@@ -77,20 +77,8 @@ html {
     -moz-outline-style: none;
     outline-style: none;
   }
-}
-
-.dashboard-status::before {
-  content: '🙂';
-}
-
-.dashboard-status.status-won::before {
-  content: '🥳';
-}
-
-.dashboard-status.status-lost::before {
-  content: '😭';
-}
-
-.dashboard-status.status-guessing::before {
-  content: '😨';
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }

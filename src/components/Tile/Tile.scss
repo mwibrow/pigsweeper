@@ -9,96 +9,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-  // &::before {
-  //   position: absolute;
-  //   content: '🟫';
-  // }
-
-  // &.tile-active:hover {
-  //   &::before {
-  //     content: '🟦';
-  //     cursor: pointer;
-  //   }
-  // }
-  @include disable-text-selection;
-=======
->>>>>>> main
+  cursor: pointer;
 }
 
 .tile-visible {
-  &.tile-active:hover {
-    cursor: default;
-  }
+  cursor: default;
 }
 
 .tile-sprite {
   position: absolute;
   width: 100%;
-<<<<<<< HEAD
-  // &::after {
-  //   position: absolute;
-  //   font-size: 125%;
-  //   top: 50%;
-  //   height: 50%;
-  //   transform: translate(-50%, -50%);
-  //   content: '🚩';
-  // }
-}
-
-.tile-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  line-height: 1;
-
-  align-items: center;
-  justify-content: center;
-  display: none;
-}
-
-.tile-image-kind-mine {
-  // &::before {
-  //   content: '🐷';
-  // }
-}
-
-.tile-image-kind-empty {
-  // &::before {
-  //   content: '🟩';
-  // }
-}
-
-.tile-flagged {
-  position: absolute;
-  font-size: 75%;
-  // &::after {
-  //   content: '🚩';
-  // }
-=======
   height: 100%;
   top: 0;
   left: 0;
->>>>>>> main
 }
+
 .tile-neighbors {
+  position: absolute;
   font-size: 50%;
-<<<<<<< HEAD
-  z-index: 1;
-  cursor: default;
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-=======
   font-weight: bold;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -66%);
->>>>>>> main
+  transform: translate(-50%, -50%);
+  cursor: default;
 }
