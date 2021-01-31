@@ -1,9 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.867 33.867" height="128" width="128">
-    <path d="M2.117 4.233C9.525 0 17.992 8.467 25.4 4.233v16.934c-7.408 4.233-15.875-4.234-23.283 0V4.233z" fill="#d32f2f"/>
-    <path d="M26.988 2.117c-.88 0-1.588.708-1.588 1.587v23.934a4.762 2.117 0 00-3.175 1.995 4.762 2.117 0 004.763 2.117 4.762 2.117 0 004.762-2.117 4.762 2.117 0 00-3.175-1.995V3.704c0-.88-.708-1.587-1.587-1.587z" fill="#607d8b"/>
-    <path d="M30.644 28.277a.974.974 0 01.048.298c0 1.169-2.133 2.117-4.763 2.117-1.412 0-2.752-.279-3.656-.761.333 1.043 2.343 1.819 4.715 1.819 2.63 0 4.762-.948 4.762-2.117 0-.495-.391-.975-1.106-1.356z" fill="#455a64"/>
-    <path d="M25.4 4.233c-.35.2-.703.372-1.058.518v15.357c-7.058 4.033-15.077-3.46-22.225-.517v1.576c7.408-4.234 15.875 4.233 23.283 0V4.233z" fill="#b71c1c"/>
-    <path d="M7.108 3.013c-1.7-.024-3.37.294-4.991 1.22v16.934c.35-.2.703-.372 1.058-.518V5.292c7.058-4.033 15.076 3.46 22.225.517V4.233c-5.788 3.308-12.222-1.136-18.292-1.22z" fill="#f44336"/>
-    <path d="M26.988 2.117c-.88 0-1.588.708-1.588 1.587v23.934a4.762 2.117 0 00-3.175 1.995 4.762 2.117 0 001.106 1.356 4.762 2.117 0 01-.048-.297 4.762 2.117 0 013.175-1.996V4.763a1.584 1.584 0 012.049-1.52 1.584 1.584 0 00-1.52-1.126z" fill="#90a4ae"/>
-    <path d="M27.448 2.185c.044.146.069.3.069.46v26.08c.373.06.729.138 1.058.236V3.704c0-.719-.473-1.322-1.127-1.52z" fill="#455a64"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="flag.svg"
+   inkscape:version="1.0 (4035a4f, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 128 128"
+   height="128"
+   width="128">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:bbox-nodes="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-bbox="true"
+     inkscape:window-maximized="0"
+     inkscape:window-y="25"
+     inkscape:window-x="0"
+     inkscape:window-height="1359"
+     inkscape:window-width="2560"
+     units="px"
+     showgrid="true"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="73.047612"
+     inkscape:cx="126.7811"
+     inkscape:zoom="7.542801"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base">
+    <inkscape:grid
+       empspacing="4"
+       id="grid10"
+       type="xygrid" />
+    <inkscape:grid
+       empspacing="2"
+       spacingy="8"
+       spacingx="8"
+       id="grid12"
+       type="xygrid" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       d="M 108,110 A 20,6 0 0 1 88,116 20,6 0 0 1 68,110 20,6 0 0 1 88,104 20,6 0 0 1 108,110 Z"
+       style="fill:#37474f;stroke:none;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1205" />
+    <path
+       sodipodi:nodetypes="ssccss"
+       d="M 88,20 C 90.216,20 92,21.784 92,24 V 110 H 84 V 24 C 84,21.784 85.784,20 88,20 Z"
+       style="fill:#78909c;stroke:none;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1208" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       id="path1210"
+       d="M 84,24 C 64,16 44,32 24,24 V 80 C 44,88 64,72 84,80 V 24"
+       style="fill:#d32f2f;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
 </svg>
