@@ -3,14 +3,15 @@ import React from 'react';
 
 import './Sprite.scss';
 
-import { ReactComponent as Earth } from './svg/earth.svg';
+import { ReactComponent as Earth } from './svg/mud.svg';
 import { ReactComponent as Flag } from './svg/flag.svg';
 import { ReactComponent as Grass } from './svg/grass.svg';
 import { ReactComponent as Pig } from './svg/pig.svg';
 import { ReactComponent as Happy } from './svg/smile.svg';
 import { ReactComponent as Scared } from './svg/pensive.svg';
 import { ReactComponent as Sad } from './svg/crying.svg';
-import { ReactComponent as Party } from './svg/celebrate.svg';
+import { ReactComponent as Party } from './svg/party.svg';
+
 export enum SpriteName {
   Happy = 'happy',
   Sad = 'sad',
